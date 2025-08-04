@@ -1,5 +1,8 @@
 import type { Preview } from "@storybook/react-vite";
 
+import "../src/index.css";
+import "../src/components/task.css";
+
 const preview: Preview = {
   parameters: {
     controls: {
