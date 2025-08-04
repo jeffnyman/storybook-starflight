@@ -4,11 +4,7 @@ of a task as it exists in the application's data layer.
 This is the data contract.
 */
 
-interface TaskData {
-  id: string;
-  title: string;
-  state: "TASK_ARCHIVED" | "TASK_INBOX" | "TASK_PINNED";
-}
+import type { TaskData } from "../types";
 
 /*
 TaskProps represents the component interface, which is
