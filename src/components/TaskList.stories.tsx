@@ -11,6 +11,7 @@ const meta = {
   args: {
     ...TaskStories.ActionsData,
   },
+  decorators: [(story) => <div style={{ margin: "3rem" }}>{story()}</div>],
 } satisfies Meta<typeof TaskList>;
 
 export default meta;
