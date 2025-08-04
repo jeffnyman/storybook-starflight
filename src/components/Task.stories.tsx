@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import { fn } from "storybook/internal/test";
+
 import Task from "./Task";
+
+export const ActionsData = {
+  onArchiveTask: fn(),
+  onPinTask: fn(),
+};
 
 /*
 The `meta` object will be the default export that describes
@@ -11,6 +18,10 @@ const meta = {
   component: Task,
   title: "Tasker/Task",
   tags: ["autodocs"],
+  excludeStories: /.*Data$/,
+  args: {
+    ...ActionsData,
+  },
 } satisfies Meta<typeof Task>;
 
 export default meta;
